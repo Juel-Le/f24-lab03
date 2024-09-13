@@ -29,20 +29,14 @@ public class DelegationSortedIntList implements IntegerList {
 
     @Override
     public boolean add(int num) {
-        boolean res = sortList.add(num);
-        if (res) {
-            total++;
-        }
-        return res;
+        total++;
+        return sortList.add(num);
     }
 
    @Override
     public boolean addAll(IntegerList list) {
-        boolean res = sortList.addAll(list);
-        if (res) {
-            total += list.size();
-        }
-        return res;
+        total += list.size();
+        return sortList.addAll(list);
     }  
     
     @Override
